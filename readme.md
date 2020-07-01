@@ -1,72 +1,54 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Flat-System
+As the system was required to be a web-based application, I preferred to use Laravel framework as it’s a fast, easy, also I am still learning it online so I wanted to improve my experience in it by practicing, also it’s an MVC which provides a good structure for my system. So the system flow will be like this: First the system goes to the route then to the controller, then to the view, then to the model.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Tools
+ Framework: Laravel (version 6.0.0 )
 
-## About Laravel
+ Code Editor: Visual Studio Code
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ Languages: PHP, HTML5, CSS3, jQuery, Bootstrap
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ Database: SQLite
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Database Schema
+![Screenshot](Schema.PNG)
 
-## Learning Laravel
+There is a relation many to many between the 2 tables Flat and Receivable, so I created a third
+new table describing this relation called flatreceivables having 2 foreign keys flatId and
+receivableId.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# GUI Structure
+The GUI separated to 3 sections:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+ Right side bar contains all the system lists
 
-## Laravel Sponsors
+  1. Flats which is a full CRUD into the database in the flats table (create, read,
+  update, delete)
+  2. Receivables which is a full CRUD into the database in the Receivables table
+  (create, read, update, delete)
+  3. Flatreceivables which is a full CRUD into the database in the flatreceivables table
+  (create, read, update, delete)
+  4. Outgoings which is a full CRUD into the database in the outgoings table (create,
+  read, update, delete)
+  5. FlatPayments which is a full CRUD into the database in the flatreceivables table
+  in the field isPaid (create, read, update, delete)
+  
+ Header contains the 3 required reports in 3 buttons
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+  1. Total Balance Report which describes the total paid payments – the total
+  expenses
+  2. The Expenses Report which shows the expanses between 2 dates
+  3. The Flats Receivables Report which shows the un paid receivables for each flat
+  
+ The page shows the displaying content of any page from the previous ones
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+# How to run?
+1. Install Xampp, PHP Version 7.3.8
+2. Install Laravel Framework Version 6.0.0
+3. Install DB Browser for SQLite Version 3.11.2
+4. Install Visual Studio Code editor
+5. Run Xampp local host
+6. Go to url: http://localhost/abmAssessment/public/
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Demo URL
+https://youtu.be/ZIZue8K4zdg
