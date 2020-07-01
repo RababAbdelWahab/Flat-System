@@ -52,3 +52,6 @@ The GUI separated to 3 sections:
 
 # Demo URL
 https://youtu.be/ZIZue8K4zdg
+
+[![Watch the video](view.PNG)](https://youtu.be/ZIZue8K4zdg)
+
